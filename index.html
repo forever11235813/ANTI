@@ -184,13 +184,52 @@
       border-radius: 8px;
     }
     @media (max-width: 600px) {
-      .strategy-section { padding: 10px 2px 10px 2px; }
-      .header, footer { padding: 12px 0; }
-      .navbar, .intro, main { padding: 0 2px; }
-      .navbar h1 { font-size: 1em; }
-      .copy-btn { padding: 5px 10px; font-size: 0.98em; }
-      .copy-box { padding: 6px 6px; }
-      .intro { font-size: 0.98em; }
+      .strategy-section {
+        padding: 8px 2vw 8px 2vw;
+        margin: 18px 0;
+        border-radius: 8px;
+      }
+      .header, footer {
+        padding: 10px 0;
+      }
+      .navbar, .intro, main {
+        padding: 0 2vw;
+        max-width: 100vw;
+      }
+      .navbar h1 {
+        font-size: 1em;
+      }
+      .nav-links a {
+        font-size: 0.98em;
+        padding: 3px 7px;
+      }
+      .copy-btn {
+        padding: 5px 8px;
+        font-size: 0.96em;
+      }
+      .copy-box {
+        padding: 5px 4px;
+        font-size: 0.96em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .intro {
+        font-size: 0.97em;
+      }
+      #evidence-images {
+        gap: 6px;
+      }
+      #evidence-images a img {
+        width: 44vw;
+        max-width: 120px;
+        min-width: 60px;
+        height: auto;
+      }
+      pre {
+        font-size: 0.97em;
+        padding: 10px 4px;
+      }
     }
   </style>
   <!-- JSZip & FileSaver CDN -->
@@ -285,13 +324,13 @@
             <a href="img6.jpg" download target="_blank"><img src="img6.jpg" alt="证据6" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
             <a href="img7.jpg" download target="_blank"><img src="img7.jpg" alt="证据7" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
           </div>
-          <button class="copy-btn" id="download-all-images" style="margin-top:12px;">下载全部图片</button>
+          <button class="copy-btn" id="download-all-images" style="margin-top:12px;">下载全部图片为zip</button>
         </div>
       </details>
     </section>
   </main>
   <footer>
-    <p>欢迎加入行动，保护网络清朗环境</p>
+    <p>欢迎加入行动，保护网络清朗环境,后续会更多的抵制计划！</p>
   </footer>
   <script>
     document.querySelectorAll('.copy-btn').forEach(btn => {
