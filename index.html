@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抵制劣迹艺人上节目组计划书</title>
+  <style>
+    body {
+      font-family: '微软雅黑', 'PingFang SC', Arial, sans-serif;
+      background: #f7fafd;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .header {
+      background: #fff;
+      color: #1976d2;
+      padding: 32px 0 12px 0;
+      border-bottom: 1px solid #e3e3e3;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 12px;
+    }
+    .navbar h1 {
+      font-size: 1.7em;
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      margin-left: 18px;
+    }
+    .nav-links a {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1em;
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover {
+      background: #e3f0ff;
+      color: #1565c0;
+    }
+    .intro {
+      margin: 18px auto 0 auto;
+      max-width: 700px;
+      font-size: 1.08em;
+      padding: 0 12px;
+      color: #444;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 32px 12px 0 12px;
+    }
+    .strategy-section {
+      background: #fff;
+      margin: 32px 0;
+      padding: 28px 20px 20px 20px;
+      border-radius: 14px;
+      border: 1px solid #e3e3e3;
+      box-sizing: border-box;
+    }
+    .strategy-section:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    .strategy-section h2 {
+      color: #1976d2;
+      font-size: 1.15em;
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .strategy-section h3 {
+      color: #1976d2;
+      margin-bottom: 8px;
+      font-size: 1em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .copy-box {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      background: #f7fafd;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 1em;
+      border: 1px solid #e3e3e3;
+    }
+    .copy-box span {
+      flex: 1;
+      word-break: break-all;
+    }
+    .copy-btn {
+      margin-left: 12px;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 16px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 500;
+      transition: background 0.2s;
+      outline: none;
+    }
+    .copy-btn:active, .copy-btn.copied {
+      background: #1565c0;
+    }
+    details {
+      margin-top: 14px;
+      border-radius: 8px;
+      background: #f7fafd;
+      border: 1px solid #e3e3e3;
+      transition: box-shadow 0.2s;
+      overflow: hidden;
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: #1976d2;
+      margin-top: 0;
+      outline: none;
+      font-size: 1em;
+      padding: 10px 16px;
+      background: none;
+      border-bottom: 1px solid #e3e3e3;
+      border-radius: 8px 8px 0 0;
+      transition: color 0.2s, background 0.2s;
+    }
+    details[open] summary {
+      color: #1565c0;
+      background: #f0f4f8;
+    }
+    pre {
+      background: #f7fafd;
+      border-radius: 0 0 8px 8px;
+      padding: 14px;
+      font-size: 1em;
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 0;
+      color: #333;
+      border-top: 1px solid #e3e3e3;
+      font-family: inherit;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      padding: 32px 0 16px 0;
+      font-size: 1em;
+      background: #fff;
+      margin-top: 48px;
+      border-top: 1px solid #e3e3e3;
+      border-radius: 0;
+      letter-spacing: 1px;
+    }
+    /* 滚动条美化 */
+    ::-webkit-scrollbar {
+      width: 8px;
+      background: #e3f0ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #b3e5fc;
+      border-radius: 8px;
+    }
+    @media (max-width: 600px) {
+      .strategy-section { padding: 10px 2px 10px 2px; }
+      .header, footer { padding: 12px 0; }
+      .navbar, .intro, main { padding: 0 2px; }
+      .navbar h1 { font-size: 1em; }
+      .copy-btn { padding: 5px 10px; font-size: 0.98em; }
+      .copy-box { padding: 6px 6px; }
+      .intro { font-size: 0.98em; }
+    }
+  </style>
+  <!-- JSZip & FileSaver CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <h1>抵制劣迹艺人上节目组计划书</h1>
+      <ul class="nav-links">
+        <li><a href="#phone-complaint">电话投诉</a></li>
+        <li><a href="#email-complaint">邮件投诉</a></li>
+      </ul>
+    </nav>
+    <p class="intro">
+      为了维护社会风气和青少年心理安全，我们整理了系统的投诉策略。
+    </p>
+  </header>
+  <main>
+    <section id="phone-complaint" class="strategy-section">
+      <h2>最有效：官方渠道投诉（打电话 + 邮件）</h2>
+      <h3>📞 官方客服电话</h3>
+      <div class="copy-box">
+        <span>芒果TV：400-611-1314</span>
+        <span>（按1-3-3可以进入人工投
+           诉，如遇忙音，请稍后再拨！
+           办公时间（周一至周五）上午
+           8:00-12:00， 下午3:00-6:00）</span>
+        <button class="copy-btn" data-copy="400-611-1314">复制</button>
+      </div>
+      <div class="copy-box">
+        <span>湖南广电电话：0731-84801111</span>
+        <button class="copy-btn" data-copy="0731-84801111">复制</button>
+      </div>
+      <div class="copy-box">
+        <span>长沙市长热线：0731-12345</span>
+        <button class="copy-btn" data-copy="0731-12345">复制</button>
+      </div>
+      <details>
+        <summary>拨打时建议内容简洁理性，表达参考如下</summary>
+        <pre id="call-suggestion-text">
+您好，我是《你好星期六》的观众，想反馈一下关于田栩宁（真名田雷）这位艺人的情况。
+他今年7月7号参与了你们节目录制，但他和他的粉丝最近对普通人进行了“开盒”等隐私侵犯行为和网络暴力，严重影响了社会风气，也伤害了观众尤其是青少年的心理安全。
+另外，他在清朗行动和77事变纪念期间频繁炒作，私生活混乱，行为不当，还涉嫌带坏未成年人。还有他和华策经纪公司联合发布的声明，有误导公众的嫌疑。
+因为你们节目的受众大多是青少年，这种不良影响特别严重，恳请节目组认真审查他的上镜资格，最好删除他的相关片段。
+我们还会把这情况反馈给相关品牌，希望节目组能重视，谢谢您！
+        </pre>
+        <button class="copy-btn" style="margin: 10px 0 0 0;" data-copy-target="call-suggestion-text">复制建议内容</button>
+      </details>
+    </section>
+    <section id="email-complaint" class="strategy-section">
+      <h3>📧 官方客服邮箱（保留证据）</h3>
+      <div class="copy-box">
+        <span>芒果TV：service@mgtv.com</span>
+        <button class="copy-btn" data-copy="service@mgtv.com">复制</button>
+      </div>
+      <div class="copy-box">
+        <span>邮件标题示例：关于艺人田栩宁参与《你好星期六》节目录制及其引发网络暴力行为的反馈</span>
+        <button class="copy-btn" data-copy="关于艺人田栩宁参与《你好星期六》节目录制及其引发网络暴力行为的反馈">复制</button>
+      </div>
+      <details>
+        <summary>邮件正文参考</summary>
+        <pre id="email-suggestion-text">
+            尊敬的节目组负责人：
+
+            您好！
+            
+            我是一名长期关注《你好星期六》的观众，现就艺人田栩宁（真名田雷）于2025年7月7日参与贵节目录制一事，向您表达严重关切，并附上部分网络暴力行为的图像证据，供参考。
+            
+            近期，该艺人及其粉丝多次针对普通网友进行“开盒”行为（包括人肉搜索、泄露隐私等），在社交媒体上组织、煽动大规模网络暴力，造成了严重的社会影响。尤其令人担忧的是，这些行为已对受害人造成严重精神伤害，并影响广大青少年观众的心理安全与价值观导向。
+            
+            此外，该艺人在清朗专项行动期间以及“七七事变”纪念节点，仍持续进行高频率商业炒作和热搜操作，其私生活混乱、行为不当，甚至存在带坏未成年人的不良记录。其经纪公司华策所发布的相关声明也存在混淆视听、误导舆论的嫌疑。
+            
+            鉴于《你好星期六》面向青少年等年轻群体，该类劣迹艺人频繁亮相将严重损害节目的社会形象与公共责任。为此，我恳请节目组严肃审查其上镜资格，并建议删除其相关录制片段，以维护节目声誉，保护青少年身心健康。
+            
+            为佐证情况，我在邮件附件中一并提供了有关网络暴力实施过程的截图及受害人情绪崩溃的相关图像材料，望予以核查。
+            
+            我们也将同步向相关品牌反馈此事，期待节目组的积极回应与妥善处理。
+            
+            感谢您的关注和理解！
+        </pre>
+        <button class="copy-btn" style="margin: 10px 0 0 0;" data-copy-target="email-suggestion-text">复制邮件正文</button>
+        <div style="margin-top:24px;">
+          <div style="font-weight:500;color:#1976d2;margin-bottom:8px;">附上相关图片资料：</div>
+          <div id="evidence-images" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+            <a href="img1.jpg" download target="_blank"><img src="img1.jpg" alt="证据1" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
+            <a href="img2.jpg" download target="_blank"><img src="img2.jpg" alt="证据2" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
+            <a href="img3.jpg" download target="_blank"><img src="img3.jpg" alt="证据3" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
+            <a href="img4.jpg" download target="_blank"><img src="img4.jpg" alt="证据4" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
+            <a href="img5.jpg" download target="_blank"><img src="img5.jpg" alt="证据5" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
+            <a href="img6.jpg" download target="_blank"><img src="img6.jpg" alt="证据6" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
+            <a href="img7.jpg" download target="_blank"><img src="img7.jpg" alt="证据7" style="width:80px;height:80px;object-fit:cover;border-radius:6px;border:1px solid #e3e3e3;"></a>
+          </div>
+          <button class="copy-btn" id="download-all-images" style="margin-top:12px;">下载全部图片</button>
+        </div>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <p>欢迎加入行动，保护网络清朗环境</p>
+  </footer>
+  <script>
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        let text = '';
+        if (this.hasAttribute('data-copy')) {
+          text = this.getAttribute('data-copy');
+        } else if (this.hasAttribute('data-copy-target')) {
+          const target = document.getElementById(this.getAttribute('data-copy-target'));
+          if (target) text = target.innerText.trim();
+        }
+        if (text) {
+          navigator.clipboard.writeText(text);
+          this.classList.add('copied');
+          this.textContent = '已复制!';
+          setTimeout(() => {
+            this.textContent = this.hasAttribute('data-copy') ? '复制' : (this.hasAttribute('data-copy-target') ? (this.innerText.includes('邮件') ? '复制邮件正文' : '复制建议内容') : '复制');
+            this.classList.remove('copied');
+          }, 1200);
+        }
+      });
+    });
+    // 下载全部图片为zip
+    document.getElementById('download-all-images')?.addEventListener('click', async function() {
+      const imageFiles = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg', 'img7.jpg'];
+      const zip = new JSZip();
+      const folder = zip.folder('evidence');
+      const fetchImageAsBlob = async (url) => {
+        const res = await fetch(url);
+        return await res.blob();
+      };
+      for (const file of imageFiles) {
+        try {
+          const blob = await fetchImageAsBlob(file);
+          folder.file(file, blob);
+        } catch (e) {
+          // 可选：处理图片不存在等异常
+        }
+      }
+      zip.generateAsync({type: 'blob'}).then(function(content) {
+        saveAs(content, 'evidence.zip');
+      });
+    });
+  </script>
+</body>
+</html> 
